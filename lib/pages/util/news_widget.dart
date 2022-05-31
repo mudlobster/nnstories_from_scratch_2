@@ -13,20 +13,28 @@ class News extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
-                Text(author,style: TextStyle(color: Colors.grey[700]),),
-              ],
+            child: Flexible(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
+                  Text(author,style: TextStyle(color: Colors.grey[700]),),
+                ],
+              ),
             ),
           ),
           Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+                color: imageColor
+            ),
             height: 200,
-            color: imageColor,
           ),
           Padding(
             padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
