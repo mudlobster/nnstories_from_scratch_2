@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'pages/meet.dart';
 import 'pages/news.dart';
 import 'pages/restaurants.dart';
-import 'pages/entertainment.dart';
+import 'pages/sport.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
     UserNews(),
     UserMeet(),
     UserRestaurants(),
-    UserEntertainment(),
+    UserSport(),
   ];
 
   @override
