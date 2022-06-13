@@ -22,8 +22,6 @@ class NewsModel {
     this.id = dataMap["id"]??99;
     this.photoURL = dataMap["photoURL"]??"";
   }
-
-
 }
 
 Map<String, dynamic> map = {

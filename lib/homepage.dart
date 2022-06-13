@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nnstories_from_scratch/pages/settings.dart';
 import 'pages/meet.dart';
 import 'pages/news.dart';
 import 'pages/restaurants.dart';
@@ -38,8 +39,24 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.grey[200],
         elevation: 0,
         title: Text('nnstories”',style: GoogleFonts.libreBaskerville(
-          textStyle: (TextStyle(fontSize: 30))
-        ),
+          textStyle: (TextStyle(fontSize: 30))),),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(child: Center(child: Text('nnstories”',style: GoogleFonts.libreBaskerville(
+                textStyle: (TextStyle(fontSize: 30))),))),
+            ListTile(
+              leading: Icon(Icons.account_box),
+              title: Text ('Учетная запись',
+                  style: TextStyle(fontSize: 18)
+              ),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Account()));
+              },
+            ),
+
+          ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
